@@ -1,11 +1,12 @@
+
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int a,c=0;
+    int a,b,c=0,sum;
     scanf("%d",&a);
     for(int i=1;i<=a;i++){
         if(a%i==0){
-            c++;
+            c+=1;
         }
     }
     if(c==2){
@@ -14,4 +15,7 @@ int main(){
     else{
         printf("not a prime");
     }
+    
+    
+        
 }
