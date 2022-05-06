@@ -1,16 +1,15 @@
+
 #include<stdio.h>
-int main()
-{
-    int n;
-    scanf("%d",&n);
-    int a[n],b[n];
-    for(int i=0;i<n;i++)
-    {
-        scanf("%d%d",&a[i],&b[i]);
-    }
-    for(int i=0;i<n;i++)
-    {
+#include<math.h>
+int main(){
+    int a,b,c,sum;
+    scanf("%d",&a);
+    for(int i=0;i<a;i++){
+        scanf("%d%d",&c,&b);
+        sum=c+b;
         printf("%d
-",a[i]+b[i]);
+",sum);
     }
+    
+        
 }
