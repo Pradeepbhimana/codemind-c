@@ -1,11 +1,13 @@
+
 #include<stdio.h>
+#include<math.h>
 int main(){
-    int a;
+    int a,b,c=0;
     scanf("%d",&a);
-    int b=a,sum=0;
+    b=a;
     while(b!=0){
-        sum=sum*10+b%10;
-        b=b/10;
+        c=c*10+b%10;
+        b/=10;
     }
-    printf("%d",sum);
+    printf("%d",c);
 }
