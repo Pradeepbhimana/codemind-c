@@ -1,19 +1,21 @@
+
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int a;
+    int a,b,c=0,sum;
     scanf("%d",&a);
-    int b=a;
-    int c=0;
+    b=a;
     while(b!=0){
+        
         c=c*10+b%10;
-        b=b/10;
+        b/=10;
     }
-    
-    if(a==c){
+    if(c==a){
         printf("True");
     }
     else{
         printf("False");
     }
+    
+        
 }
