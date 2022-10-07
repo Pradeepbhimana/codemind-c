@@ -1,48 +1,34 @@
 #include<stdio.h>
+int co(int a){
+    int s=0;
+    while(a){
+        s=s+a%10;
+        a/=10;
+    }
+    return s;
+    
+}
 int main(){
     int a;
-    scanf("%d",&a);
-    int c[a];
-    for(int i=0;i<a;i++){
-        scanf("%d",&c[i]);
-        
-    }
-    /*int d[b];
-    for(int i=0;i<b;i++){
-        scanf("%d",&d[i]);
-    }*/
     
-    int q,s=0;
-    for(int i=0;i<a;i++){
-        if(c[i+1]-c[i]>0){
-            s++;
-            break;
+    scanf("%d",&a);
+    int b[a];
+    for (int i=0;i<a;i++){
+        scanf("%d",&b[i]);
+    }
+    int q=0;
+    for (int i=1;i<a;i++){
+        if(b[i]>=b[i-1]){
+            q+=1;
             
         }
-        
-    
+      
     }
-    if(s==0){
-        printf("yes");
-        
-    }
-    else{
+    if(q>0){
         printf("no");
     }
-    /*for(int i=0;i<b;i++){
-        q=0;
-        for(int j=0;j<a;j++){
-            if(d[i]==c[j]){
-                q++;
-            }
-        }
-        if(q==0){
-            s++;
-        }
+    else{
+        printf("yes");
     }
-   printf("%d",s);*/
     
-    
-    
-        
 }
