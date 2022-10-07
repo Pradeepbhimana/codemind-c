@@ -1,30 +1,23 @@
-
-#include <stdio.h>
-int rev(int a){
-    int b=a,c=0;
-    while(b!=0){
-        c=c*10+b%10;
-        b/=10;
+#include<stdio.h>
+int co(int a){
+    int s=0;
+    while(a){
+        s=s*10+a%10;
+        a/=10;
     }
-    printf("%d ",c);
+    return s;
+    
 }
-
-int main()
-{
-    int a,c;
+int main(){
+    int a;
+    
     scanf("%d",&a);
     int b[a];
     for (int i=0;i<a;i++){
         scanf("%d",&b[i]);
     }
-    int k=0;
-    
-    for(int i=0;i<a;i++){
-        rev(b[i]);
-        
+    int q=0;
+    for (int i=0;i<a;i++){
+        printf("%d ",co(b[i]));
     }
-    //printf("%d",k);
-    
-
-    return 0;
 }
