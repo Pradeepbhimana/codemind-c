@@ -1,24 +1,22 @@
 #include<stdio.h>
 int main(){
     int a,b;
-    scanf("%d%d",&a,&b);
-    int c[a][b],sum1=0;
+    scanf("%d %d",&a,&b);
+    int m[a][b];
+    
     for(int i=0;i<a;i++){
-        for(int j=0;j<b;j++){
-            scanf("%d",&c[i][j]);
-            sum1+=c[i][j];
+        for (int j=0;j<b;j++){
+            scanf("%d",&m[i][j]);
         }
     }
-    int sum=0;
-    //if(a%2==0){
-    for(int i=1;i<a-1;i++){
-        for(int j=1;j<b-1;j++){
-        
-            sum+=c[i][j];
-                //printf("%d " ,c[i][j]);
-            
+    int su=0;
+    for(int i=0;i<a;i++){
+        for (int j=0;j<b;j++){
+            if(i==0 or j==a-1 or j==0 or i==a-1){
+                su+=m[i][j];
+            }
         }
     }
-    //}
-    printf("%d",sum1-sum);
+    printf("%d",su);
+    
 }
