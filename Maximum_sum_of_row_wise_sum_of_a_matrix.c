@@ -1,27 +1,35 @@
 #include<stdio.h>
-int main()
-{
-    int n,m,max=1,sum=0,max1=0,sum1=0;
-    scanf("%d%d",&n,&m);
-    int arr1[n][m],i,j;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<m;j++)
-        {
-           scanf("%d",&arr1[i][j]);
+int main(){
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int c[a][b],s=0;
+    for(int i=0;i<a;i++){
+        for(int j=0;j<b;j++){
+            scanf("%d",&c[i][j]);
+            //sum1+=c[i][j];
         }
     }
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<m;j++)
-        {
-            sum1=sum1+arr1[i][j];
+    int sum1=0,sum;
+    //if(a%2==0){
+    for(int i=0;i<a;i++){
+        sum=0;
+        for(int j=0;j<b;j++){
+            if(i==s){
+                sum+=c[i][j];
+            }
+        
+            //sum+=c[i][j];
+                //printf("%d " ,c[i][j]);
+            
         }
-        if(sum1>max1)
-        {
-            max1=sum1;
+        s++;
+        if(sum1<sum){
+            sum1=sum;
+            
         }
-        sum1=0;
+        
     }
-    printf("%d",max1);
+    printf("%d",sum1);
+    //}
+    //printf("%d",sum1-sum);
 }
